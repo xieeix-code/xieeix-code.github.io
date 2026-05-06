@@ -12,18 +12,18 @@ main:
     url: /CV/
   
   - title: "基本情况"
-    url: /基本情况/
+    url: /Basic/
 
   - title: "科研经历"
-    url: /科研经历/
+    url: /research/
 
   - title: "项目经历"
-    url: /项目经历/
+    url: /project/
   
   - title: "比赛经历"
-    url: /比赛经历/
+    url: /competition/
 
-    
+
   # - title: "Publications"
   #   url: /publications/
 
