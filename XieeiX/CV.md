@@ -1,7 +1,7 @@
 ---
 layout: archive # 文章布局
 title: "个人简历"
-permalink: /cv/
+permalink: /xieeixcv/
 author_profile: true # 显示左侧或侧边栏的个人作者信息
 ---
 
