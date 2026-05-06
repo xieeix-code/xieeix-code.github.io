@@ -1,8 +1,8 @@
 ---
-layout: archive
-title: "CV-PDF"
-permalink: /CV-pdf/
-author_profile: true
+layout: archive # 文章布局
+title: "CV"
+permalink: /CV/
+author_profile: true # 显示左侧或侧边栏的个人作者信息
 ---
 
 {% include base_path %}

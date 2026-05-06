@@ -8,24 +8,22 @@
 #      Markdown formatted page while the second is generated using JSON.
 
 main:
-  - title: "CV-PDF"
-    url: /CV-pdf/
-  
   - title: "CV"
-    url: /CV-xieeix/
-
+    url: /CV/
+  
   - title: "基本情况"
-    url: /publications/
+    url: /基本情况/
 
-  - title: "科研简历"
-    url: /files/谢宇航简历-江苏科技大学.pdf
+  - title: "科研经历"
+    url: /科研经历/
 
   - title: "项目经历"
-    url: /files/谢宇航简历-江苏科技大学.pdf
+    url: /项目经历/
   
   - title: "比赛经历"
-    url: /files/谢宇航简历-江苏科技大学.pdf
+    url: /比赛经历/
 
+    
   # - title: "Publications"
   #   url: /publications/
 
