@@ -1,11 +1,11 @@
 ---
-title: "高教社数学建模国赛(2025)"
-excerpt: "2025 年国家二等奖,担任队长,负责编程、可视化、模型验证分析"
+title: "SCA optimization algorithm based on Grünwald–Letnikov fractional position memory for feature selection"
+excerpt: "第一作者 | Under review | SCI | 2025中科院大类2区 |  2026.01 ——现今"
 collection: research
 permalink: /research/fosca/
 date: 2025-09-15
 header:
-  teaser: /images/research/cumcm-2025-teaser.png
+  teaser: /images/research/fosca.png
 ---
 
 ## 项目背景
@@ -34,7 +34,7 @@ header:
 
 ## 结果与图表
 
-<!-- ![盘入螺旋线轨迹](/images/research/cumcm-2025-fig1.png) -->
+![项目图](/images/research/fosca.png)
 
 (每张图配 1-2 句说明)
 

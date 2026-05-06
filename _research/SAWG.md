@@ -1,9 +1,9 @@
 ---
-title: "高教社数学建模国赛(2025)"
-excerpt: "2025 年国家二等奖,担任队长,负责编程、可视化、模型验证分析"
+title: "Self-Adaptive AdamW-Guided Optimization: A Learning-Driven Metaheuristic for Solving Complex Real-World Engineering Problems"
+excerpt: "—— 第一作者 | Major revision | SCI | 2025中科院大类3区 | 2025.11 —— 2026.03"
 collection: research
 permalink: /research/sawg/
-date: 2025-09-15
+date: 2025-04-11
 header:
   teaser: /images/research/sawg.png
 ---

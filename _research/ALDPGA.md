@@ -1,9 +1,9 @@
 ---
-title: "高教社数学建模国赛(2025)"
-excerpt: "2025 年国家二等奖,担任队长,负责编程、可视化、模型验证分析"
+title: "An Enhanced Plant Growth Algorithm with Adam Learning, Lévy Flight, and Dynamic Stage Control"
+excerpt: "第一作者 | Website Online | SCI | 2025中科院大类3区 | 2025.06 —— 2025.11"
 collection: research
 permalink: /research/aldpga/
-date: 2025-09-15
+date: 2025-12-30
 header:
   teaser: /images/research/aldpga.png
 ---
