@@ -2,10 +2,10 @@
 title: "高教社数学建模国赛(2025)"
 excerpt: "2025 年国家二等奖,担任队长,负责编程、可视化、模型验证分析"
 collection: research
-permalink: /research/cumcm-2025/
+permalink: /research/sawg/
 date: 2025-09-15
 header:
-  teaser: /images/research/cumcm-2025-teaser.png
+  teaser: /images/research/sawg.png
 ---
 
 ## 项目背景
@@ -34,7 +34,7 @@ header:
 
 ## 结果与图表
 
-<!-- ![盘入螺旋线轨迹](/images/research/cumcm-2025-fig1.png) -->
+![论文摘要图](/images/research/sawg.png)
 
 (每张图配 1-2 句说明)
 
@@ -44,5 +44,5 @@ header:
 
 ## 相关材料
 
-<!-- - [完整论文 PDF](/files/research/cumcm-2024-paper.pdf)
-- [代码仓库](https://github.com/yourname/cumcm-2024) -->
+- [完整论文 PDF](/files/research/SAWG.pdf)
+- [代码仓库](https://github.com/xieeix-code/The-Intelligent-Optimization-Algorithm-SAWG)

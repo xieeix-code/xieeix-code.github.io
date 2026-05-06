@@ -9,19 +9,19 @@
 
 main:
   - title: "CV"
-    url: /CV/
+    url: /cv/
   
   - title: "基本情况"
-    url: /Basic/
+    url: /Basic-xieeix/
 
   - title: "科研经历"
     url: /research/
 
   - title: "项目经历"
-    url: /project/
+    url: /projects/
   
   - title: "比赛经历"
-    url: /competition/
+    url: /competitions/
 
 
   # - title: "Publications"

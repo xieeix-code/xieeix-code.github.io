@@ -34,7 +34,7 @@ header:
 
 ## 结果与图表
 
-<!-- ![盘入螺旋线轨迹](/images/research/cumcm-2025-fig1.png) -->
+![导弹模拟图](/images/research/cumcm-2025-teaser.png)
 
 (每张图配 1-2 句说明)
 
@@ -44,5 +44,5 @@ header:
 
 ## 相关材料
 
-<!-- - [完整论文 PDF](/files/research/cumcm-2024-paper.pdf)
-- [代码仓库](https://github.com/yourname/cumcm-2024) -->
+- [完整论文 PDF](/files/research/2025A.pdf)
+<!-- - [代码仓库](https://github.com/yourname/cumcm-2024) -->

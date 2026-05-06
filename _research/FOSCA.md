@@ -2,7 +2,7 @@
 title: "高教社数学建模国赛(2025)"
 excerpt: "2025 年国家二等奖,担任队长,负责编程、可视化、模型验证分析"
 collection: research
-permalink: /research/cumcm-2025/
+permalink: /research/fosca/
 date: 2025-09-15
 header:
   teaser: /images/research/cumcm-2025-teaser.png
