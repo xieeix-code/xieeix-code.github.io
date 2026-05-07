@@ -1,11 +1,11 @@
 ---
 title: "高教社数学建模国赛(2025)"
 excerpt: "2025 年国家二等奖,担任队长,负责编程、可视化、模型验证分析"
-collection: research
-permalink: /research/cumcm-2025/
+collection: competitions
+permalink: /competitions/cumcm-2025/
 date: 2025-09-15
 header:
-  teaser: /images/research/cumcm-2025-teaser.png
+  teaser: /images/competitions/cumcm-2025-teaser.png
 ---
 
 ## 项目背景
@@ -34,7 +34,7 @@ header:
 
 ## 结果与图表
 
-![导弹模拟图](/images/research/cumcm-2025-teaser.png)
+![导弹模拟图](/images/competitions/cumcm-2025-teaser.png)
 
 (每张图配 1-2 句说明)
 
@@ -44,5 +44,5 @@ header:
 
 ## 相关材料
 
-- [完整论文 PDF](/files/research/2025A.pdf)
+- [完整论文 PDF](/files/competitions/2025A.pdf)
 <!-- - [代码仓库](https://github.com/yourname/cumcm-2024) -->
