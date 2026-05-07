@@ -221,6 +221,12 @@ kramdown:
 
 # These settings control the types of collections used by the template
 collections:
+  projects:
+    output: true
+    permalink: /:collection/:path/
+  competitions:
+    output: true
+    permalink: /:collection/:path/
   research:
     output: true
     permalink: /:collection/:path/
