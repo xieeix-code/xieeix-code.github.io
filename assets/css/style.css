@@ -140,6 +140,13 @@ a:hover { color: #123f5d; }
   border-bottom: 1px solid #b9ccd8;
 }
 
+.entry-links .link-placeholder {
+  color: #8b8e91;
+  font-size: 13px;
+  font-weight: 650;
+  border-bottom: 1px dashed #c9cbcc;
+}
+
 .main-column { min-width: 0; }
 
 .section {
