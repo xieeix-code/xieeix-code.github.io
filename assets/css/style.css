@@ -238,12 +238,16 @@ a:hover { color: #123f5d; }
 }
 
 .plain-list li {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  align-items: start;
   padding: 7px 0;
   border-bottom: 1px dashed #e2e2df;
 }
 
 .plain-list li:last-child { border-bottom: 0; }
-.plain-list span { display: inline-block; width: 58px; color: var(--muted); font-size: 13px; }
+.plain-list .honor-year { color: var(--muted); font-size: 13px; }
+.plain-list .honor-text { min-width: 0; }
 
 .skills {
   padding: 15px 18px;
