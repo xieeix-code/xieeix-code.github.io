@@ -9,15 +9,6 @@ header:
 ---
 
 ---
-title: "An Enhanced Plant Growth Algorithm with Adam Learning, Lévy Flight, and Dynamic Stage Control"
-excerpt: "第一作者 | Published Online | SCI | 2025 中科院大类 3 区 | 2025.06 —— 2025.11"
-collection: research
-permalink: /research/aldpga/
-date: 2025-12-30
-header:
-  teaser: /images/research/aldpga.png
----
-
 ## 项目概览
 
 本工作针对传统 **植物生长算法 (Plant Growth Algorithm, PGA)** 在高维优化中的三大顽疾——**局部开发不足、过早收敛、维度灾难** ——提出了 **ALDPGA (Adam–Lévy Dynamic Plant Growth Algorithm)**。
