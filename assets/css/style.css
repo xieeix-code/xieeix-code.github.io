@@ -27,8 +27,7 @@ body {
 
 a {
   color: var(--accent);
-  text-underline-offset: 3px;
-  text-decoration-thickness: 1px;
+  text-decoration: none;
 }
 
 a:hover { color: #123f5d; }
@@ -136,7 +135,9 @@ a:hover { color: #123f5d; }
 .profile-links a, .entry-links a {
   font-size: 13px;
   font-weight: 650;
-  text-decoration: none;
+}
+
+.publication .entry-links a {
   border-bottom: 1px solid #b9ccd8;
 }
 
