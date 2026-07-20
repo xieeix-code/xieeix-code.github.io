@@ -25,9 +25,14 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-a {
+a,
+a:visited,
+a:hover,
+a:focus,
+a:active {
   color: var(--accent);
-  text-decoration: none;
+  text-decoration: none !important;
+  border-bottom: 0;
 }
 
 a:hover { color: #123f5d; }
@@ -137,7 +142,11 @@ a:hover { color: #123f5d; }
   font-weight: 650;
 }
 
-.publication .entry-links a {
+.publication .entry-links a,
+.publication .entry-links a:visited,
+.publication .entry-links a:hover,
+.publication .entry-links a:focus,
+.publication .entry-links a:active {
   border-bottom: 1px solid #b9ccd8;
 }
 
