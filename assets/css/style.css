@@ -270,92 +270,6 @@ a:hover { color: #123f5d; }
 
 footer { color: #999b9d; font-size: 12px; }
 
-.pdf-dialog {
-  width: min(1100px, calc(100vw - 32px));
-  height: min(900px, calc(100dvh - 48px));
-  max-width: none;
-  max-height: none;
-  padding: 0;
-  border: 0;
-  border-radius: 8px;
-  background: var(--paper);
-  box-shadow: 0 22px 70px rgba(20, 29, 36, .24);
-  overflow: hidden;
-}
-
-.pdf-dialog[open] { display: flex; }
-
-.pdf-dialog::backdrop {
-  background: rgba(24, 29, 33, .62);
-  backdrop-filter: blur(3px);
-}
-
-.pdf-dialog__panel {
-  min-width: 0;
-  min-height: 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.pdf-dialog__header {
-  min-height: 54px;
-  padding: 9px 12px 9px 18px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  border-bottom: 1px solid var(--line);
-}
-
-.pdf-dialog__header h2 {
-  margin: 0;
-  overflow: hidden;
-  font: 700 15px/1.35 var(--serif);
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.pdf-dialog__actions {
-  flex: none;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.pdf-download {
-  font-size: 12px;
-  font-weight: 650;
-}
-
-.pdf-dialog__close {
-  width: 34px;
-  height: 34px;
-  padding: 0;
-  border: 0;
-  border-radius: 50%;
-  color: #55595d;
-  background: #f0f1f1;
-  font: 400 25px/1 var(--sans);
-  cursor: pointer;
-}
-
-.pdf-dialog__close:hover,
-.pdf-dialog__close:focus-visible {
-  color: var(--ink);
-  background: #e4e6e6;
-}
-
-.pdf-dialog__frame {
-  width: 100%;
-  min-height: 0;
-  flex: 1;
-  border: 0;
-  background: #eceeed;
-}
-
-body.pdf-viewer-open { overflow: hidden; }
-
 @media (max-width: 760px) {
   html { scroll-padding-top: 66px; }
   .nav { width: min(100% - 28px, 620px); height: 56px; }
@@ -371,12 +285,6 @@ body.pdf-viewer-open { overflow: hidden; }
   .section { padding-bottom: 35px; margin-bottom: 36px; }
   .entry { grid-template-columns: 30px minmax(0, 1fr); }
   .entry.compact { grid-template-columns: 62px minmax(0, 1fr); }
-  .pdf-dialog {
-    width: calc(100vw - 16px);
-    height: calc(100dvh - 16px);
-  }
-  .pdf-dialog__header { padding-left: 12px; }
-  .pdf-dialog__header h2 { font-size: 13px; }
 }
 
 @media (max-width: 430px) {
@@ -389,7 +297,7 @@ body.pdf-viewer-open { overflow: hidden; }
 
 @media print {
   body { background: #fff; font-size: 10pt; }
-  .site-header, .skip-link, .pdf-dialog { display: none; }
+  .site-header, .skip-link { display: none; }
   .page { width: 100%; padding: 0; grid-template-columns: 150px 1fr; gap: 30px; }
   .profile { position: static; }
   .avatar { width: 120px; height: 120px; box-shadow: none; }
