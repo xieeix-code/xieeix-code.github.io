@@ -154,11 +154,7 @@ a:hover { color: #123f5d; }
 .visitor-counter {
   color: var(--muted);
   font-variant-numeric: tabular-nums;
-}
-
-#busuanzi_site_pv {
-  color: var(--ink);
-  font-weight: 650;
+  white-space: nowrap;
 }
 
 .profile-links a, .entry-links a {
