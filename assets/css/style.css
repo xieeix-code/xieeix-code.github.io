@@ -174,7 +174,10 @@ a:hover { color: #123f5d; }
   gap: 14px;
 }
 
-.profile-contact-row { font-size: 13px; }
+.profile-contact-row {
+  font-size: 13px;
+  white-space: nowrap;
+}
 
 .profile-links a, .entry-links a {
   font-size: 13px;
@@ -343,6 +346,16 @@ footer { color: #999b9d; font-size: 12px; }
   .entry, .entry.compact, .timeline-row { display: block; }
   .entry-index, .entry-year, .timeline-date { margin-bottom: 6px; }
   .skills span { display: block; width: auto; }
+}
+
+@media (max-width: 340px) {
+  html { scroll-padding-top: 126px; }
+  .nav-brand-group {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    row-gap: 2px;
+  }
+  .site-stats { flex: 0 0 100%; }
 }
 
 @media print {
