@@ -137,6 +137,30 @@ a:hover { color: #123f5d; }
   gap: 7px 14px;
 }
 
+.profile-link-row,
+.profile-contact-row {
+  flex: 0 0 100%;
+  margin: 0;
+}
+
+.profile-link-row {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.profile-contact-row { font-size: 13px; }
+
+.visitor-counter {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+#busuanzi_site_pv {
+  color: var(--ink);
+  font-weight: 650;
+}
+
 .profile-links a, .entry-links a {
   font-size: 13px;
   font-weight: 650;
