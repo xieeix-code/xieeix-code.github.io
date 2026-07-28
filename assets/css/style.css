@@ -162,16 +162,22 @@ a:hover { color: #123f5d; }
   gap: 7px 14px;
 }
 
-.profile-link-row,
 .profile-contact-row {
   flex: 0 0 100%;
   margin: 0;
 }
 
-.profile-link-row {
+.profile-resource-links {
   display: flex;
-  justify-content: center;
-  gap: 14px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 7px;
+  text-align: left;
+}
+
+.profile-cv-row {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .profile-social-links {
