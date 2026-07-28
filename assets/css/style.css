@@ -185,10 +185,9 @@ a:hover { color: #123f5d; }
 }
 
 .profile-social-links {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 7px;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 7px 14px;
 }
 
 .social-link {
