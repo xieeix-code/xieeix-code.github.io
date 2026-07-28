@@ -165,9 +165,13 @@ a:hover { color: #123f5d; }
 .profile-contact-row {
   flex: 0 0 100%;
   margin: 0;
+  font-size: 13px;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .profile-resource-links {
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -181,9 +185,10 @@ a:hover { color: #123f5d; }
 }
 
 .profile-social-links {
-  display: grid;
-  grid-template-columns: repeat(2, max-content);
-  gap: 7px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
 }
 
 .social-link {
@@ -196,11 +201,6 @@ a:hover { color: #123f5d; }
   width: 15px;
   height: 15px;
   flex: none;
-}
-
-.profile-contact-row {
-  font-size: 13px;
-  white-space: nowrap;
 }
 
 .profile-links a, .entry-links a {
