@@ -3,7 +3,6 @@ document.querySelectorAll('.publication-resources').forEach((resources) => {
   const panel = resources.querySelector('.detail-panel');
   const arrow = button.querySelector('.detail-arrow');
   let pinned = false;
-  let timer;
 
   function render(preview = false) {
     resources.classList.toggle('is-preview', preview && !pinned);
@@ -14,12 +13,10 @@ document.querySelectorAll('.publication-resources').forEach((resources) => {
 
   button.addEventListener('pointerenter', (event) => {
     if (event.pointerType !== 'mouse' || pinned) return;
-    clearTimeout(timer);
-    timer = setTimeout(() => render(true), 1000);
+    render(true);
   });
 
   button.addEventListener('pointerleave', (event) => {
-    clearTimeout(timer);
     if (!panel.contains(event.relatedTarget)) render();
   });
 
@@ -28,7 +25,6 @@ document.querySelectorAll('.publication-resources').forEach((resources) => {
   });
 
   button.addEventListener('click', () => {
-    clearTimeout(timer);
     pinned = !pinned;
     render();
   });
@@ -36,7 +32,6 @@ document.querySelectorAll('.publication-resources').forEach((resources) => {
   // Escape dismisses only a temporary preview; pinned details close via Detail.
   resources.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && !pinned) {
-      clearTimeout(timer);
       render();
     }
   });

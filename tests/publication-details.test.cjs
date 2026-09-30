@@ -16,31 +16,25 @@ const papers = Array.from({length: 4}, () => {
   button.children = {'.detail-arrow': arrow};
   return {resources, button, panel, arrow};
 });
-let now = 0, nextId = 0;
-const timers = new Map();
-const tick = (ms) => { now += ms; for (const [id, task] of timers) if (task.at <= now) { timers.delete(id); task.fn(); } };
 vm.runInNewContext(fs.readFileSync(require('node:path').join(__dirname, '../assets/js/publication-details.js'), 'utf8'), {
-  document: {querySelectorAll: () => papers.map(p => p.resources)},
-  setTimeout: (fn, ms) => { const id = ++nextId; timers.set(id, {fn, at: now + ms}); return id; },
-  clearTimeout: (id) => timers.delete(id)
+  document: {querySelectorAll: () => papers.map(p => p.resources)}
 });
 const [a, b] = papers;
 assert(papers.every(p => p.panel.hidden && !p.button.hidden));
-a.button.fire('pointerenter'); tick(999); assert(a.panel.hidden);
-tick(1); assert(!a.panel.hidden && a.resources.classes.has('is-preview'));
+a.button.fire('pointerenter'); assert(!a.panel.hidden && a.resources.classes.has('is-preview'));
 a.button.fire('pointerleave', {relatedTarget: a.panel}); assert(!a.panel.hidden);
 a.panel.fire('pointerleave'); assert(a.panel.hidden);
-a.button.fire('pointerenter'); tick(500); a.button.fire('pointerleave'); tick(1000); assert(a.panel.hidden);
-a.button.fire('pointerenter'); tick(1000); a.button.fire('click');
+a.button.fire('pointerenter'); a.button.fire('pointerleave'); assert(a.panel.hidden);
+a.button.fire('pointerenter'); a.button.fire('click');
 assert(!a.panel.hidden && !a.resources.classes.has('is-preview'));
 assert.equal(a.arrow.textContent, '▴');
 a.button.fire('pointerleave'); a.panel.fire('pointerleave'); a.resources.fire('keydown', {key: 'Escape'}); assert(!a.panel.hidden);
 b.button.fire('click'); assert(!a.panel.hidden && !b.panel.hidden);
-a.button.fire('click'); tick(2000); assert(a.panel.hidden && !b.panel.hidden);
+a.button.fire('click'); assert(a.panel.hidden && !b.panel.hidden);
 assert.equal(a.arrow.textContent, '▾'); assert.equal(a.button.attributes['aria-expanded'], 'false');
-a.button.fire('pointerenter', {pointerType: 'touch'}); tick(2000); assert(a.panel.hidden);
+a.button.fire('pointerenter', {pointerType: 'touch'}); assert(a.panel.hidden);
 a.button.fire('click'); assert(!a.panel.hidden); a.button.fire('click');
-a.button.fire('pointerenter'); tick(1000); a.resources.fire('keydown', {key: 'Escape'}); assert(a.panel.hidden);
-a.button.fire('pointerenter'); tick(500); a.button.fire('click'); tick(1000);
+a.button.fire('pointerenter'); a.resources.fire('keydown', {key: 'Escape'}); assert(a.panel.hidden);
+a.button.fire('pointerenter'); a.button.fire('click');
 assert(!a.panel.hidden && !a.resources.classes.has('is-preview'));
-console.log('PASS: 1s delay, early leave cancellation, preview reading, pin/unpin, no immediate reopening, independent papers, touch, Escape, pending timer cancellation.');
+console.log('PASS: immediate hover, leave dismissal, preview reading, pin/unpin, no immediate reopening, independent papers, touch, Escape.');
