@@ -334,12 +334,35 @@ a:hover { color: #19386a; text-decoration: underline; }
   .entry-links a:active, .detail-toggle:active { transform: scale(.97); }
 }
 
-.entry-index, .entry-year {
+.entry-index {
   padding-top: 4px;
   color: var(--muted);
   font: 600 12px/1.4 var(--sans);
   letter-spacing: .08em;
 }
+
+.publication-year, .entry-year, .honor-year {
+  --year-tint: #DCE6F2;
+  display: inline-flex;
+  align-self: start;
+  justify-self: start;
+  align-items: center;
+  justify-content: center;
+  min-width: 52px;
+  padding: 4px 10px;
+  border: 1px solid rgba(255, 255, 255, .85);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, .6), rgba(255, 255, 255, .08)), var(--year-tint);
+  background-color: color-mix(in srgb, var(--year-tint) 82%, transparent);
+  box-shadow: 0 2px 8px rgba(34, 75, 141, .1), inset 0 1px 0 rgba(255, 255, 255, .75);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: var(--ink);
+  font: 600 12px/1.4 var(--sans);
+  letter-spacing: .03em;
+  white-space: nowrap;
+}
+.entry-year { --year-tint: #DCF1F2; }
 
 .entry h3, .timeline-row h3 {
   margin: 0 0 7px;
@@ -349,16 +372,12 @@ a:hover { color: #19386a; text-decoration: underline; }
 .publication { grid-template-columns: 40% minmax(0, 1fr); gap: 24px; align-items: start; }
 .publication > div { min-width: 0; }
 .publication h3 { color: var(--accent); }
-.publication-visual { position: relative; align-self: center; }
-.publication-visual .entry-index {
+.publication-visual { align-self: center; }
+.publication-year {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 10px;
+  left: 10px;
   z-index: 1;
-  padding: 3px 7px;
-  background: var(--accent);
-  color: #fff;
-  letter-spacing: 0;
 }
 .publication-thumbnail { display: block; border: 1px solid #e0e4e8; border-radius: 3px; overflow: hidden; }
 .publication-thumbnail img { display: block; width: 100%; height: auto; }
@@ -401,6 +420,7 @@ a:hover { color: #19386a; text-decoration: underline; }
 .plain-list li {
   display: grid;
   grid-template-columns: 58px minmax(0, 1fr);
+  column-gap: 12px;
   align-items: start;
   padding: 14px 18px;
   margin-bottom: 12px;
@@ -411,7 +431,7 @@ a:hover { color: #19386a; text-decoration: underline; }
 }
 
 .plain-list li:last-child { margin-bottom: 0; }
-.plain-list .honor-year { color: var(--muted); font-size: 13px; }
+.plain-list .honor-year { --year-tint: #DDDCF2; }
 .plain-list .honor-text { min-width: 0; }
 
 .skills {
