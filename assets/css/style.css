@@ -333,7 +333,6 @@ a:hover { color: #123f5d; }
 .skills span { display: inline-block; width: 94px; font-size: 12px; letter-spacing: .05em; text-transform: uppercase; }
 
 footer { color: #999b9d; font-size: 12px; }
-.site-views { vertical-align: middle; }
 
 @media (max-width: 760px) {
   html { scroll-padding-top: 102px; }
