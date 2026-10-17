@@ -341,6 +341,7 @@ a:hover { color: #19386a; text-decoration: underline; }
 
 .entry.compact { grid-template-columns: 68px minmax(0, 1fr); }
 .entry.compact p:not(.meta) { color: #505358; }
+#projects .entry { border-color: #DCF1F2; }
 
 .subheading {
   margin: 30px 0 16px;
@@ -370,10 +371,15 @@ a:hover { color: #19386a; text-decoration: underline; }
   display: grid;
   grid-template-columns: 58px minmax(0, 1fr);
   align-items: start;
-  padding: 7px 0;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  border: 1px solid #DDDCF2;
+  border-radius: 8px;
+  background: var(--paper);
+  box-shadow: 0 2px 8px rgba(34, 75, 141, .05);
 }
 
-.plain-list li:last-child { border-bottom: 0; }
+.plain-list li:last-child { margin-bottom: 0; }
 .plain-list .honor-year { color: var(--muted); font-size: 13px; }
 .plain-list .honor-text { min-width: 0; }
 
