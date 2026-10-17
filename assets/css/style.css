@@ -315,13 +315,13 @@ a:hover { color: #19386a; text-decoration: underline; }
   font: 700 17px/1.48 var(--serif);
 }
 
-.publication { grid-template-columns: 200px minmax(0, 1fr); gap: 24px; align-items: start; }
+.publication { grid-template-columns: 40% minmax(0, 1fr); gap: 24px; align-items: start; }
 .publication > div { min-width: 0; }
 .publication h3 { color: var(--accent); }
-.publication-visual { position: relative; padding-top: 5px; }
+.publication-visual { position: relative; align-self: center; }
 .publication-visual .entry-index {
   position: absolute;
-  top: 5px;
+  top: 0;
   left: 0;
   z-index: 1;
   padding: 3px 7px;
@@ -390,8 +390,7 @@ footer { padding-top: 18px; border-top: 1px solid var(--line); color: var(--mute
 
 @media (min-width: 761px) and (max-width: 1080px) {
   .page { grid-template-columns: 200px minmax(0, 1fr); gap: 32px; }
-  .publication { grid-template-columns: 150px minmax(0, 1fr); gap: 18px; }
-  .publication-text { grid-template-columns: 30px minmax(0, 1fr); }
+  .publication { gap: 18px; }
   .nav-links { gap: 20px; }
   .site-stats, .site-stats .meta { font-size: 12px; }
 }
@@ -431,8 +430,6 @@ footer { padding-top: 18px; border-top: 1px solid var(--line); color: var(--mute
   .profile-resource-links { flex-direction: row; flex-wrap: wrap; column-gap: 20px; }
   .profile-social-links { display: flex; flex-wrap: wrap; gap: 10px 20px; }
   .section { margin-bottom: 32px; }
-  .publication { grid-template-columns: 160px minmax(0, 1fr); gap: 18px; }
-  .publication-text { grid-template-columns: 30px minmax(0, 1fr); }
   .entry.compact { grid-template-columns: 62px minmax(0, 1fr); }
 }
 
@@ -442,9 +439,7 @@ footer { padding-top: 18px; border-top: 1px solid var(--line); color: var(--mute
   .site-stats .meta { font-size: 11px; }
   .entry.compact, .timeline-row { display: block; }
   .entry-year, .timeline-date { margin-bottom: 6px; }
-  .publication { display: block; }
-  .publication-visual { width: min(100%, 280px); margin-bottom: 16px; }
-  .publication-text > .entry-index { margin-bottom: 6px; }
+  .publication { gap: 12px; }
   .entry { padding: 15px; }
   .skills span { display: block; width: auto; }
 }
@@ -467,8 +462,7 @@ footer { padding-top: 18px; border-top: 1px solid var(--line); color: var(--mute
   .profile-resource-links { flex-direction: column; }
   .profile-social-links { display: grid; }
   .avatar { width: 120px; height: 120px; box-shadow: none; }
-  .publication { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 16px; break-inside: avoid; }
-  .publication-visual { width: auto; }
+  .publication { gap: 16px; break-inside: avoid; }
   .publication-text { grid-template-columns: 24px minmax(0, 1fr); }
   .section { break-inside: avoid; margin-bottom: 22px; padding-bottom: 22px; }
   .entry, .entry:hover { break-inside: avoid; padding: 12px; box-shadow: none; transform: none; transition: none; }
