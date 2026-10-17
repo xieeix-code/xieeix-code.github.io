@@ -8,9 +8,10 @@
   <meta name="theme-color" content="#ffffff">
   <title>谢宇航 · Yuhang Xie</title>
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/css/style.css?v=20261017-6">
+  <link rel="stylesheet" href="/assets/css/style.css?v=20261017-8">
   <script src="/assets/js/site-meta.js?v=20260727-2" defer></script>
   <script src="/assets/js/publication-details.js?v=20260930-1" defer></script>
+  <script src="/assets/js/intro-language.js?v=20261017-1" defer></script>
 </head>
 
 <body>
@@ -102,8 +103,31 @@
 
     <div class="main-column">
       <section id="about" class="section intro">
-        <h2>About Me </h2>
-        <p>I studied
+        <div class="about-heading">
+          <h2>About Me </h2>
+          <div class="language-switch" role="group" aria-label="简介语言">
+            <button type="button" data-language="zh" aria-pressed="true"
+              aria-controls="about-bio-zh about-bio-en research-intro-zh research-intro-en">中文</button>
+            <button type="button" data-language="en" aria-pressed="false" lang="en"
+              aria-controls="about-bio-zh about-bio-en research-intro-zh research-intro-en">English</button>
+          </div>
+        </div>
+        <p id="about-bio-zh" data-copy-language="zh" lang="zh-CN">自2023年起，我就读于
+          <a href="https://jisuanji.just.edu.cn/" target="_blank" rel="noopener noreferrer">School of Computer Science,
+            Jiangsu University of Science and Technology</a>，预计于2027年6月获得 B.Sc. 学位。
+          非常荣幸能够得到
+          <a href="https://jisuanji.just.edu.cn/2022/1118/c7351a316025/page.htm" target="_blank"
+            rel="noopener noreferrer">Prof. Shang Gao</a> 和
+          <a href="https://mypage.just.edu.cn/jsjkxgc/qb/list.htm" target="_blank" rel="noopener noreferrer">Assoc.
+            Prof. Bin Qin</a> 的指导。
+          <br><br>
+          我已获得 <a href="https://www.sc.sdu.edu.cn/" target="_blank" rel="noopener noreferrer">School of Software,
+            Shandong University</a> 的<a href="/files/已录取.jpg" target="_blank"
+            rel="noopener noreferrer">研究生推荐录取资格</a>，并将于2027年9月入学。
+          <br><br>
+          我的研究兴趣包括多模态大语言模型、多模态智能体和深度学习。
+        </p>
+        <p id="about-bio-en" data-copy-language="en" lang="en" hidden>I studied
           From 2023 to the present, I have been studying at the <a href="https://jisuanji.just.edu.cn/" target="_blank"
             rel="noopener noreferrer">School of Computer Science, Jiangsu University of
             Science and Technology</a>. I expect to obtain my B.Sc. degrees in June 2027.
@@ -126,6 +150,14 @@
 
       <section id="research" class="section">
         <h2>Research </h2>
+        <div id="research-intro-zh" data-copy-language="zh" lang="zh-CN">
+          <p>我担任 Jiangsu University of Science and Technology 的 National Undergraduate Innovation
+            and Entrepreneurship Training Program 项目负责人（项目编号：X2026102890014）。</p>
+          <p>我参与了 National Natural Science Foundation of China (NSFC) 面上项目（62376109），该项目的 PI 是我的导师
+            <a href="https://mypage.just.edu.cn/jsjkxgc/qb/list.htm" target="_blank"
+              rel="noopener noreferrer">Bin Qin</a>。</p>
+        </div>
+        <div id="research-intro-en" data-copy-language="en" lang="en" hidden>
         <p> I am the person in charge of the National Undergraduate Innovation
           and Entrepreneurship Training Program of Jiangsu University of Science and Technology (Project
           No. X2026102890014).</p>
@@ -133,6 +165,7 @@
         <p> I am a participant in a National Natural Science Foundation of China (NSFC) general program (62376109), the
           project PI of which is my supervisor, <a href="https://mypage.just.edu.cn/jsjkxgc/qb/list.htm" target="_blank"
             rel="noopener noreferrer">Bin Qin</a>.</p>
+        </div>
 
         <p> <span class="meta">A paper without accessible codes and data is a pure paper; Otherwise, it is beyond a
             paper, maybe a work of art.</span></p>

@@ -258,6 +258,37 @@ a:hover { color: #19386a; text-decoration: underline; }
 
 .intro p { margin: 0 0 13px; }
 
+.about-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid var(--line);
+}
+.about-heading h2 { margin: 0; padding: 0; border: 0; }
+.language-switch {
+  display: inline-flex;
+  gap: 3px;
+  padding: 3px;
+  border: 1px solid #dbe3ee;
+  border-radius: 6px;
+  background: var(--accent-soft);
+}
+.language-switch button {
+  padding: 4px 8px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--muted);
+  font: 600 12px/1.5 var(--sans);
+  cursor: pointer;
+}
+.language-switch button:hover { background: var(--paper); color: var(--accent); }
+.language-switch button[aria-pressed="true"] { background: var(--accent); color: #fff; }
+
 .interest-line {
   margin-top: 21px !important;
   color: #4f5357;
