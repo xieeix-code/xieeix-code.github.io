@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" preserveAspectRatio="xMidYMid slice">
+<title>夕阳下的沙丘</title>
+<defs>
+<linearGradient id="sky" x2="0" y2="1"><stop stop-color="#d97739"/><stop offset=".48" stop-color="#f5a44c"/><stop offset="1" stop-color="#efbb7a"/></linearGradient>
+<radialGradient id="sunlight" gradientUnits="userSpaceOnUse" cx="2820" cy="345" r="850"><stop stop-color="#fff8a8"/><stop offset=".12" stop-color="#ffde6c" stop-opacity=".92"/><stop offset=".42" stop-color="#ffc35a" stop-opacity=".4"/><stop offset="1" stop-color="#ffb44b" stop-opacity="0"/></radialGradient>
+<linearGradient id="haze" x2="0" y2="1"><stop stop-color="#b57548"/><stop offset="1" stop-color="#e5a05f"/></linearGradient>
+<linearGradient id="distant" x2=".3" y2="1"><stop stop-color="#f0af70"/><stop offset=".38" stop-color="#bd6e3b"/><stop offset="1" stop-color="#794124"/></linearGradient>
+<linearGradient id="lit" x1=".1" y1="0" x2=".65" y2="1"><stop stop-color="#ffbd71"/><stop offset=".18" stop-color="#ee9c50"/><stop offset=".58" stop-color="#cb6c30"/><stop offset="1" stop-color="#9d4c25"/></linearGradient>
+<linearGradient id="shadow" x1=".8" x2=".1" y2="1"><stop stop-color="#c8773c"/><stop offset=".38" stop-color="#8e421f"/><stop offset="1" stop-color="#6d321d"/></linearGradient>
+<linearGradient id="front" x1=".55" y1="0" x2=".2" y2="1"><stop stop-color="#f9ad62"/><stop offset=".3" stop-color="#e99549"/><stop offset=".72" stop-color="#c76b31"/><stop offset="1" stop-color="#a75327"/></linearGradient>
+<linearGradient id="crest" x2="1"><stop stop-color="#f4ab63" stop-opacity=".1"/><stop offset=".55" stop-color="#ffe0a2" stop-opacity=".85"/><stop offset="1" stop-color="#f0a65d" stop-opacity=".1"/></linearGradient>
+<radialGradient id="warmth" cx=".76" cy=".17" r=".88"><stop stop-color="#ffe0a0" stop-opacity=".15"/><stop offset="1" stop-color="#5f2815" stop-opacity=".12"/></radialGradient>
+<pattern id="ripples" width="1800" height="82" patternUnits="userSpaceOnUse" patternTransform="rotate(-12)"><path d="M-100 25Q170 0 440 24T980 25T1520 24T2060 25" fill="none" stroke="#754321" stroke-width="2" opacity=".11"/><path d="M-100 29Q170 4 440 28T980 29T1520 28T2060 29" fill="none" stroke="#ffce88" stroke-width="1.5" opacity=".2"/></pattern>
+</defs>
+<path fill="url(#sky)" d="M0 0h3840v2160H0z"/><path fill="url(#sunlight)" d="M0 0h3840v1200H0z"/><circle cx="2820" cy="345" r="37" fill="#fff5bc"/>
+<path fill="url(#haze)" d="M0 630q170-38 340-4t380-13t370 5t340-22t370 32t390-24t360 5t390-4t430 12t470-3v500H0z"/>
+<path fill="url(#distant)" d="M-80 750C330 655 600 835 1030 699s620 44 1010-33 680 90 1120 18 660 14 840 38v540H-80z"/>
+<path fill="url(#shadow)" d="M-100 840C460 760 580 960 1230 802s720 42 1170-36 950 88 1540-16v560H-100z"/>
+<path fill="url(#lit)" d="M-100 1025C340 850 520 875 880 948s580 42 1070-57 800-80 1130 28 570 55 860-36v640H-100z"/>
+<path fill="url(#shadow)" d="M-100 1230C360 1000 650 1080 1060 1130s700-184 1120-144 730 187 1760-24v660H-100z"/>
+<path fill="url(#lit)" d="M-160 1450C300 1120 570 1010 890 1125s510 168 840 74 600-194 970-148 650 119 1210 13v670H-160z"/>
+<path fill="url(#shadow)" d="M-160 1450C390 1145 700 1235 1150 1395s740 18 1110-115 890-149 1730-78v740H-160z"/>
+<path fill="url(#front)" d="M-180 1715C430 1610 1000 1410 1660 1320s1280-374 2340-265v1180H-180z"/>
+<path fill="url(#ripples)" d="M-180 1715C430 1610 1000 1410 1660 1320s1280-374 2340-265v1180H-180z"/>
+<g fill="none" stroke="url(#crest)"><path d="M-80 750C330 655 600 835 1030 699s620 44 1010-33 680 90 1120 18 660 14 840 38" stroke-width="3"/><path d="M-100 1025C340 850 520 875 880 948s580 42 1070-57 800-80 1130 28 570 55 860-36" stroke-width="4"/><path d="M-160 1450C300 1120 570 1010 890 1125s510 168 840 74 600-194 970-148 650 119 1210 13" stroke-width="5"/><path d="M-180 1715C430 1610 1000 1410 1660 1320s1280-374 2340-265" stroke-width="6"/></g>
+<path fill="url(#warmth)" d="M0 0h3840v2160H0z"/>
+</svg>

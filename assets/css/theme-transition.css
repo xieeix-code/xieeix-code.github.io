@@ -1,0 +1,14 @@
+/* The browser cross-fades complete snapshots, including icons and scene images. */
+::view-transition { pointer-events: none; }
+::view-transition-group(root),
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: .5s;
+  animation-timing-function: ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(root),
+  ::view-transition-old(root),
+  ::view-transition-new(root) { animation: none; }
+}

@@ -1,0 +1,59 @@
+/* SVG refraction reference: https://github.com/shuding/liquid-glass */
+/* Scene backgrounds and glass surfaces; everything else uses the minimal theme. */
+@media screen {
+  :root[data-style="liquid"] {
+    --liquid-scene: url("/images/themes/liquid-desert.svg");
+    --scene-veil: rgb(254 253 252 / 64%);
+    --glass-edge: rgb(255 255 255 / 58%);
+    --glass-shadow: inset 0 0 0 .3px var(--glass-edge), 0 5px 18px rgb(91 49 22 / 6%);
+  }
+  :root[data-style="liquid"][data-theme="dark"] {
+    --liquid-scene: url("/images/themes/liquid-stars.svg");
+    --scene-veil: rgb(8 12 21 / 28%);
+    --glass-edge: rgb(255 255 255 / 38%);
+    --glass-shadow: inset 0 0 0 .3px var(--glass-edge), 0 5px 18px rgb(0 0 0 / 14%);
+  }
+
+  [data-style="liquid"] body { isolation: isolate; }
+  [data-style="liquid"] body::before,
+  [data-style="liquid"] body::after {
+    content: "";
+    position: fixed;
+    z-index: -1;
+    inset: 0;
+    pointer-events: none;
+  }
+  [data-style="liquid"] body::before { background: var(--liquid-scene) center / cover no-repeat; }
+  [data-style="liquid"] body::after { background: var(--scene-veil); }
+
+  :root[data-style="liquid"] :is(#research, #projects, #honors) :is(.entry, .plain-list li, .detail-panel, .publication-year, .entry-year, .honor-year),
+  :root[data-style="liquid"] #research .entry-links :is(a, button, .link-placeholder) {
+    background: rgb(255 255 255 / 3%);
+    /* Fractional inset shadows render a hairline without rounding the layout border to a device pixel. */
+    border-color: transparent;
+    box-shadow: var(--glass-shadow);
+    -webkit-backdrop-filter: blur(1.5px) contrast(1.06) brightness(1.02) saturate(110%);
+    backdrop-filter: blur(1.5px) contrast(1.06) brightness(1.02) saturate(110%);
+  }
+  [data-style="liquid"][data-refraction="svg"] :is(#research, #projects, #honors) :is(.entry, .plain-list li, .detail-panel, .publication-year, .entry-year, .honor-year),
+  [data-style="liquid"][data-refraction="svg"] #research .entry-links :is(a, button, .link-placeholder) {
+    backdrop-filter: url("#liquid-edge-refraction") blur(1.5px) contrast(1.06) brightness(1.02) saturate(110%);
+  }
+
+  [data-style="liquid"] :is(#research, #projects) .entry { border-radius: 20px; }
+  [data-style="liquid"] #honors .plain-list li,
+  [data-style="liquid"] #research .detail-panel { border-radius: 16px; }
+  [data-style="liquid"] :is(#research, #projects, #honors) :is(.publication-year, .entry-year, .honor-year),
+  [data-style="liquid"] #research .entry-links :is(a, button, .link-placeholder) { border-radius: 8px; }
+
+  :root[data-style="liquid"] #research .entry-links :is(a, button):focus-visible {
+    background: rgb(255 255 255 / 8%);
+    color: var(--accent);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    :root[data-style="liquid"] #research .entry-links :is(a, button):hover {
+      background: rgb(255 255 255 / 8%);
+      color: var(--accent);
+    }
+  }
+}
