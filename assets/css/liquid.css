@@ -6,12 +6,20 @@
     --scene-veil: rgb(254 253 252 / 64%);
     --glass-edge: rgb(255 255 255 / 58%);
     --glass-shadow: inset 0 0 0 .3px var(--glass-edge), 0 5px 18px rgb(91 49 22 / 6%);
+    --glass-filter: blur(1.5px) contrast(1.06) brightness(1.02) saturate(110%);
+    --glass-control-ink: #684324;
+    --glass-control-highlight: #512a11;
   }
   :root[data-style="liquid"][data-theme="dark"] {
     --liquid-scene: url("/images/themes/liquid-stars.svg");
     --scene-veil: rgb(8 12 21 / 28%);
     --glass-edge: rgb(255 255 255 / 38%);
     --glass-shadow: inset 0 0 0 .3px var(--glass-edge), 0 5px 18px rgb(0 0 0 / 14%);
+    --glass-control-ink: #dce7f7;
+    --glass-control-highlight: #f6faff;
+  }
+  :root[data-style="liquid"][data-refraction="svg"] {
+    --glass-filter: url("#liquid-edge-refraction") blur(1.5px) contrast(1.06) brightness(1.02) saturate(110%);
   }
 
   [data-style="liquid"] body { isolation: isolate; }
@@ -26,18 +34,34 @@
   [data-style="liquid"] body::before { background: var(--liquid-scene) center / cover no-repeat; }
   [data-style="liquid"] body::after { background: var(--scene-veil); }
 
+  /* Match the fixed scene behind the controls without exposing scrolling text. */
+  [data-style="liquid"] .site-header {
+    background: linear-gradient(var(--scene-veil), var(--scene-veil)),
+      var(--liquid-scene) center / cover no-repeat fixed;
+  }
+
   :root[data-style="liquid"] :is(#research, #projects, #honors) :is(.entry, .plain-list li, .detail-panel, .publication-year, .entry-year, .honor-year),
-  :root[data-style="liquid"] #research .entry-links :is(a, button, .link-placeholder) {
+  :root[data-style="liquid"] #research .entry-links :is(a, button, .link-placeholder),
+  :root[data-style="liquid"] .nav-links a,
+  :root[data-style="liquid"] .appearance-switch,
+  :root[data-style="liquid"] .appearance-switch::before {
     background: rgb(255 255 255 / 3%);
     /* Fractional inset shadows render a hairline without rounding the layout border to a device pixel. */
     border-color: transparent;
     box-shadow: var(--glass-shadow);
-    -webkit-backdrop-filter: blur(1.5px) contrast(1.06) brightness(1.02) saturate(110%);
-    backdrop-filter: blur(1.5px) contrast(1.06) brightness(1.02) saturate(110%);
+    -webkit-backdrop-filter: var(--glass-filter);
+    backdrop-filter: var(--glass-filter);
   }
-  [data-style="liquid"][data-refraction="svg"] :is(#research, #projects, #honors) :is(.entry, .plain-list li, .detail-panel, .publication-year, .entry-year, .honor-year),
-  [data-style="liquid"][data-refraction="svg"] #research .entry-links :is(a, button, .link-placeholder) {
-    backdrop-filter: url("#liquid-edge-refraction") blur(1.5px) contrast(1.06) brightness(1.02) saturate(110%);
+
+  [data-style="liquid"] .nav-links a,
+  [data-style="liquid"] .appearance-switch { color: var(--glass-control-ink); }
+  :root[data-style="liquid"] .appearance-switch::before { background: rgb(255 255 255 / 16%); }
+  [data-style="liquid"] .appearance-liquid { color: var(--glass-control-highlight); }
+  [data-style="liquid"] .appearance-switch:focus-within { outline-color: var(--glass-control-ink); }
+  :root[data-style="liquid"] .nav-links a:focus-visible {
+    background: rgb(255 255 255 / 8%);
+    color: var(--glass-control-highlight);
+    outline-color: var(--glass-control-ink);
   }
 
   [data-style="liquid"] :is(#research, #projects) .entry { border-radius: 20px; }
@@ -46,11 +70,26 @@
   [data-style="liquid"] :is(#research, #projects, #honors) :is(.publication-year, .entry-year, .honor-year),
   [data-style="liquid"] #research .entry-links :is(a, button, .link-placeholder) { border-radius: 8px; }
 
+  /* Let the floating panel blur content beyond its card's backdrop root. */
+  :root[data-style="liquid"] #research .entry:has(.publication-resources.is-preview) {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  :root[data-style="liquid"] #research .publication-resources.is-preview .detail-panel {
+    background: color-mix(in srgb, var(--paper) 30%, transparent);
+    -webkit-backdrop-filter: blur(24px) saturate(110%);
+    backdrop-filter: blur(24px) saturate(110%);
+  }
+
   :root[data-style="liquid"] #research .entry-links :is(a, button):focus-visible {
     background: rgb(255 255 255 / 8%);
     color: var(--accent);
   }
   @media (hover: hover) and (pointer: fine) {
+    :root[data-style="liquid"] .nav-links a:hover {
+      background: rgb(255 255 255 / 8%);
+      color: var(--glass-control-highlight);
+    }
     :root[data-style="liquid"] #research .entry-links :is(a, button):hover {
       background: rgb(255 255 255 / 8%);
       color: var(--accent);
