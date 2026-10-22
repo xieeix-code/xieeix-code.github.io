@@ -103,7 +103,7 @@
 
   /* :root[data-style="liquid"][data-theme="dark"] #research .publication-year { color: #9BBFF1; } */
 
-  :root[data-style="liquid"][data-theme="dark"] #research .publication-year {
+  :root[data-style="liquid"] #research .publication .publication-year {
     background: color-mix(in srgb, var(--paper) 75%, transparent);
     -webkit-backdrop-filter: blur(24px) saturate(110%);
     backdrop-filter: blur(24px) saturate(110%);
