@@ -60,7 +60,7 @@
   border-radius: inherit;
   background: var(--accent-fill);
   box-shadow: 0 2px 6px rgb(15 40 65 / 12%);
-  transition: transform .24s cubic-bezier(.2, .8, .2, 1);
+  transition: transform .5s ease-in-out;
 }
 .appearance-switch > span { z-index: 1; display: grid; place-items: center; pointer-events: none; }
 .appearance-minimal { color: #fff; }
