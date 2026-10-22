@@ -70,6 +70,8 @@
   [data-style="liquid"] :is(#research, #projects, #honors) :is(.publication-year, .entry-year, .honor-year),
   [data-style="liquid"] #research .entry-links :is(a, button, .link-placeholder) { border-radius: 8px; }
 
+  :root[data-style="liquid"][data-theme="dark"] #research .publication-year { color: #9BBFF1; }
+
   /* Let the floating panel blur content beyond its card's backdrop root. */
   :root[data-style="liquid"] #research .entry:has(.publication-resources.is-preview) {
     -webkit-backdrop-filter: none;
