@@ -10,6 +10,7 @@
     --glass-control-ink: #684324;
     --glass-control-highlight: #512a11;
   }
+
   :root[data-style="liquid"][data-theme="dark"] {
     --liquid-scene: url("/images/themes/liquid-stars.svg");
     --scene-veil: rgb(8 12 21 / 28%);
@@ -18,11 +19,15 @@
     --glass-control-ink: #dce7f7;
     --glass-control-highlight: #f6faff;
   }
+
   :root[data-style="liquid"][data-refraction="svg"] {
     --glass-filter: url("#liquid-edge-refraction") blur(1.5px) contrast(1.06) brightness(1.02) saturate(110%);
   }
 
-  [data-style="liquid"] body { isolation: isolate; }
+  [data-style="liquid"] body {
+    isolation: isolate;
+  }
+
   [data-style="liquid"] body::before,
   [data-style="liquid"] body::after {
     content: "";
@@ -31,8 +36,14 @@
     inset: 0;
     pointer-events: none;
   }
-  [data-style="liquid"] body::before { background: var(--liquid-scene) center / cover no-repeat; }
-  [data-style="liquid"] body::after { background: var(--scene-veil); }
+
+  [data-style="liquid"] body::before {
+    background: var(--liquid-scene) center / cover no-repeat;
+  }
+
+  [data-style="liquid"] body::after {
+    background: var(--scene-veil);
+  }
 
   /* Match the fixed scene behind the controls without exposing scrolling text. */
   [data-style="liquid"] .site-header {
@@ -54,29 +65,56 @@
   }
 
   [data-style="liquid"] .nav-links a,
-  [data-style="liquid"] .appearance-switch { color: var(--glass-control-ink); }
-  :root[data-style="liquid"] .appearance-switch::before { background: rgb(255 255 255 / 16%); }
-  [data-style="liquid"] .appearance-liquid { color: var(--glass-control-highlight); }
-  [data-style="liquid"] .appearance-switch:focus-within { outline-color: var(--glass-control-ink); }
+  [data-style="liquid"] .appearance-switch {
+    color: var(--glass-control-ink);
+  }
+
+  :root[data-style="liquid"] .appearance-switch::before {
+    background: rgb(255 255 255 / 16%);
+  }
+
+  [data-style="liquid"] .appearance-liquid {
+    color: var(--glass-control-highlight);
+  }
+
+  [data-style="liquid"] .appearance-switch:focus-within {
+    outline-color: var(--glass-control-ink);
+  }
+
   :root[data-style="liquid"] .nav-links a:focus-visible {
     background: rgb(255 255 255 / 8%);
     color: var(--glass-control-highlight);
     outline-color: var(--glass-control-ink);
   }
 
-  [data-style="liquid"] :is(#research, #projects) .entry { border-radius: 20px; }
-  [data-style="liquid"] #honors .plain-list li,
-  [data-style="liquid"] #research .detail-panel { border-radius: 16px; }
-  [data-style="liquid"] :is(#research, #projects, #honors) :is(.publication-year, .entry-year, .honor-year),
-  [data-style="liquid"] #research .entry-links :is(a, button, .link-placeholder) { border-radius: 8px; }
+  [data-style="liquid"] :is(#research, #projects) .entry {
+    border-radius: 20px;
+  }
 
-  :root[data-style="liquid"][data-theme="dark"] #research .publication-year { color: #9BBFF1; }
+  [data-style="liquid"] #honors .plain-list li,
+  [data-style="liquid"] #research .detail-panel {
+    border-radius: 16px;
+  }
+
+  [data-style="liquid"] :is(#research, #projects, #honors) :is(.publication-year, .entry-year, .honor-year),
+  [data-style="liquid"] #research .entry-links :is(a, button, .link-placeholder) {
+    border-radius: 8px;
+  }
+
+  /* :root[data-style="liquid"][data-theme="dark"] #research .publication-year { color: #9BBFF1; } */
+
+  :root[data-style="liquid"][data-theme="dark"] #research .publication-year {
+    background: color-mix(in srgb, var(--paper) 75%, transparent);
+    -webkit-backdrop-filter: blur(24px) saturate(110%);
+    backdrop-filter: blur(24px) saturate(110%);
+  }
 
   /* Let the floating panel blur content beyond its card's backdrop root. */
   :root[data-style="liquid"] #research .entry:has(.publication-resources.is-preview) {
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
   }
+
   :root[data-style="liquid"] #research .publication-resources.is-preview .detail-panel {
     background: color-mix(in srgb, var(--paper) 30%, transparent);
     -webkit-backdrop-filter: blur(24px) saturate(110%);
@@ -87,11 +125,13 @@
     background: rgb(255 255 255 / 8%);
     color: var(--accent);
   }
+
   @media (hover: hover) and (pointer: fine) {
     :root[data-style="liquid"] .nav-links a:hover {
       background: rgb(255 255 255 / 8%);
       color: var(--glass-control-highlight);
     }
+
     :root[data-style="liquid"] #research .entry-links :is(a, button):hover {
       background: rgb(255 255 255 / 8%);
       color: var(--accent);
